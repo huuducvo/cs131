@@ -1,0 +1,71 @@
+    1  git --version
+    2  wget www.github.com
+    3  ls
+    4  history > cmds.log
+    5  ls
+    6  git init
+    7  ls
+    8  mkdir ws1
+    9  mv index.html ws1
+   10  mv cmds.log ws1
+   11  ls
+   12  cd ws1
+   13  git status
+   14  pwd
+   15  cd 
+   16  ~
+   17  ls
+   18  git status
+   19  git add index.html
+   20  cd ws1
+   21  git add index.html
+   22  git add cmds.log
+   23  ls
+   24  git status
+   25  git commit -m "First Commit"
+   26  git remote add origin https://github.com/huuducvo/cs131.git
+   27  git push -u origin main
+   28  git push -u origin master
+   29  rm -rf .git
+   30  ls
+   31  rm cmds.log
+   32  rm index.html
+   33  git status
+   34  cd ~
+   35  ls
+   36  rmdir ws1
+   37  ls
+   38  git status
+   39  rm -fr .git
+   40  rm -fr .*
+   41  ls
+   42  git status
+   43  sudo dnf install git-all
+   44  ls
+   45  git status
+   46  git init
+   47  git add README.md
+   48  wget www.github.com
+   49  git commit -m "First Commit"
+   50  git add index.html
+   51  git status
+   52  got add index.html
+   53  git commit -m "First commit"
+   54  git config --global user.email "vohuuduc124@gmail.com"
+   55  git config --global user.name "huuducvo"
+   56  git commit -m "first commit"
+   57  git remote add origin https://github.com/huuducvo/cs131.git
+   58  git push -u origin main
+   59  git push -u origin master
+   60  rm -r .git
+   61  rm -rf .git
+   62  ls
+   63  rm index.html
+   64  cd ~
+   65  ls
+   66  git status
+   67  git push -u origin master
+   68  get init
+   69  git init
+   70  mkdir ws1
+   71  history > cmds.log
