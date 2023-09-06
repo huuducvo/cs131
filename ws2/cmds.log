@@ -1,0 +1,12 @@
+// Start of the commands for ws2
+  130  cp /datasets/taxidata.tar.gz .
+  148  tar zxvf taxidata.tar.gz
+  152  cd taxidata
+  159  grep "2019-03-12.*2019-03-12" 2019-03.csv | tail -n 20 > results.txt
+  165  grep "2019-03-12.*2019-03-12" 2019-03.csv |wc -l >> results.txt
+  170  mv results.txt /mnt/scratch/vo23fa/cs131
+  172  cd /mnt/scratch/vo23fa/cs131
+  174  mkdir ws2
+  176  mv results.txt ws2
+  183  cd ws2
+  185  history > cmds.log
