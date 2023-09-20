@@ -1,0 +1,21 @@
+// Start of ws4
+
+#1
+  922  ls -a
+  923  vim .bashrc
+  924  source .bashrc
+  929  l
+  930  w
+
+#2
+  933  cd
+  934  cd cs131
+  936  mkdir ws4
+  937  cd ws4
+  938  mkdir FARE
+  939  cd ~/taxidata
+  941  grep "145.*145" 2019-06.csv | cut -d, -f 11 >> ~/cs131/ws4/FARE/145.0-145.0.txt
+  942  grep "79.*125" 2019-06.csv | cut -d, -f 11 >> ~/cs131/ws4/FARE/79.0-125.0.txt
+  943  cd ~/cs131/ws4/FARE
+  946  awk '{ total += $1; count++ } END { print total/count }' 79.0-125.0.txt >> ~/ws4.txt
+  947  awk '{ total += $1; count++ } END { print total/count }' 145.0-145.0.txt >> ~/ws4.txt
