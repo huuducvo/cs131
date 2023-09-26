@@ -1,0 +1,19 @@
+// Start of a2
+#1 The average amount is: 17,8655
+ 1109  grep "2019-05-11.*2019" 2019-05.csv > temp.txt
+ 1144  cut -d, -f17 temp.txt > temp1.txt
+ 1153  awk '{ total += $1; count++ } END { print total/count }' temp1.txt >> a1.txt
+
+#2 The highest total amount paid is: 1309.8
+ 1159  sort -nr temp1.txt | head -n 1 >> a2.txt
+
+#3
+ 1186  grep ".*0000\",[3,4,5,6,7,8,9]" 2019-05.csv > temp3.txt
+ 1190  cut -d, -f8 temp3.txt | sort -nr | uniq -c | sort -nr | head -n 10 >> a2.txt
+
+#4 Among 10 most popular pickup location, the most popular dropoff location is: 237.0
+ 1206  grep "2019-05-20.*2019" 2019-05.csv | cut -d, -f8,9 | sort -nr | uniq -c | sort -nr | head -n 10 >> a2.txt
+
+#5 The most popular pickup location is: 265.0
+ 1218  grep -r ".*" ~/taxidata | cut -d, -f8 | sort -nr | uniq -c | head -n 1 >> ~/temp5.txt
+ 1226  paste temp5.txt >> a2.txt
