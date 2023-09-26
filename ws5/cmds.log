@@ -1,0 +1,7 @@
+// Start of ws5 with edit (lost of history)
+  999  grep -E "^.*,.*,.*,.*,.*,.*,.*,234.0,.*,.*,.*,.*,.*,.*,.*,.*,.*,.*^" 2019-08.csv | cut -d, -f8,9 > temp.txt
+( uniq -c temp.txt >> temp2.txt )
+ 1005  sort -nr temp2.txt | head -n 100 > temp.txt
+ 1020  cut -b1,2,3,4,5,6,7 temp.txt > temp2.txt
+ 1022  cut -b15,16,17,18,19 temp.txt > temp3.txt
+ 1044  for i in {$(paste temp2.txt)}; do echo $i >> ~/ws5/do234/$(paste temp3.txt).txt; done;
