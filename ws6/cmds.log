@@ -1,0 +1,12 @@
+//Start of ws6
+#1 Collect the lines in 2019-11.csv with vendorid 2.0
+ 1030  sed -n '/^2/w vendor2.csv' 2019-11.csv
+ 1063  wc vendor2.csv >> ws6.txt
+
+#2 Remove all special characters ":, ", -" from 2019-11.csv
+ 1065  sed -n 's/\://g p' 2019-11.csv | sed -n 's/\"//g p' | sed -n 's/\-//g p' > no-separators.csv
+ 1068  head -10 no-separators.csv >> ws6.txt
+
+#3 Remove fractional part of all numbers
+ 1081  sed -n 's/\.[0-9]*//g p' no-separators.csv > no-fractions.csv
+ 1085  head -10 no-fractions.csv >> ws6.txt
