@@ -1,0 +1,7 @@
+// Start of ws7
+
+#1 Identify the frequency of tips of customers with total amount more or equal to $10.0
+ 1059  awk -f ws7script.txt 2019-12.csv | sort -k2nr > results.txt
+
+#2 Find 20 most common tips from the result file
+ 1061  head -20 results.txt > ws7.txt

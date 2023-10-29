@@ -1,0 +1,12 @@
+BEGIN{
+ FS=","
+ num=0
+}
+{
+	if($17>="10.0"){
+		tip[$14]++
+	}
+}
+END {
+	for(x in tip) print x,tip[x]
+}
