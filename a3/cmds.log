@@ -7,14 +7,14 @@
  1135  awk -F, '{sum[$8, $9]+=$17; num[$8, $9]++} END {for(x in sum){split(x,sep,SUBSEP); print sep[1], sep[2], sum[sep[1], sep[2]]/ num[sep[1], sep[2]]}}' 2019-08.csv | sort -k2nr | head -1 >> a3.txt
 
 #3 Graph the correlation between the number of passengers and the tip amount in August 2019
- 1025  awk -F, 'BEGIN{OFS=","} {sum[$4]+=$14; num[$4]++} END {for(x in sum){print x, sum[x]/ num[x]}}' 2019-08.csv | sort -k2nr | head -10 > a3q3.dat
+ 1025  awk -F, 'BEGIN{OFS=","} {sum[$4]+=$14; num[$4]++} END {for(x in sum){print x, sum[x]/ num[x]}}' 2019-08.csv | sort -k2nr > a3q3.dat
 
 	#(Upload to github and pull from local to graph)
 
   	146  vim0 a3t3hist.plt
 
 #4 Plot the correlation between the travel distance and the total amount paid in August, 2019
- 1009  awk -F, 'BEGIN{OFS=","} {sum[$5]+=$17; num[$5]++} END {for(x in sum){print x, sum[x]/ num[x]}}' 2019-08.csv | sort -k2nr | head -10 > a3q4.dat
+ 1009  awk -F, 'BEGIN{OFS=","} {sum[$5]+=$17; num[$5]++} END {for(x in sum){print x, sum[x]/ num[x]}}' 2019-08.csv | sort -k2nr > a3q4.dat
 
 	#(Upload to github and pull from local to plot)
 	
