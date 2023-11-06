@@ -1,4 +1,4 @@
-set boxwidth 0.6 relative
+set boxwidth 0.2 relative
 set style fill solid 1.0
 set style histogram
 
