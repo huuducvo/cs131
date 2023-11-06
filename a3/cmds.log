@@ -14,4 +14,8 @@
   	146  vim0 a3t3hist.plt
 
 #4 Plot the correlation between the travel distance and the total amount paid in August, 2019
+ 1009  awk -F, 'BEGIN{OFS=","} {sum[$5]+=$17; num[$5]++} END {for(x in sum){print x, sum[x]/ num[x]}}' 2019-08.csv | sort -k2nr | head -10 > a3q4.dat
+
+	#(Upload to github and pull from local to plot)
+	
 
