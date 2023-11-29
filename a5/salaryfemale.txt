@@ -1,0 +1,11 @@
+BEGIN{
+}
+{
+        if($1 == "Female"){
+                total += $4 ; count++
+        }
+}
+END {
+        print total/count
+}
+

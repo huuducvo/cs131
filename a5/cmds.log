@@ -1,0 +1,9 @@
+//Start of a5
+
+#Get the average Software Engineer and Software Developer salary and plot them with different house values to see how many years of saving needed to buy a house
+
+  239  awk -f salary.txt Salary_Data.csv > sresult.txt # Get employees with job title Software Engineer or Software Developer
+  250  awk -f salarymale.txt sresult.txt > smaleresult.txt # Get male employee average salary
+  265  awk -f salaryfemale.txt sresult.txt > sfemaleresult.txt # Get female employee average salary
+  305  awk -f housef.txt House_Data.csv > f.txt # Get house value and calculate female saving years needed
+  307  awk -f housem.txt House_Data.csv > m.txt # Get house value and calculate male saving years needed
